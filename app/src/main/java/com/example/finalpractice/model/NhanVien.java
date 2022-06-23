@@ -1,11 +1,23 @@
 package com.example.finalpractice.model;
 
-public class NhanVien {
+import java.io.Serializable;
+
+public class NhanVien implements Serializable {
     private int id;
     private String name;
     private String birthday;
     private String home;
     private String level;
+
+    public static int getSma() {
+        return sma;
+    }
+
+    public static void setSma(int sma) {
+        NhanVien.sma = sma;
+    }
+
+    private  static  int sma = 0;
 
     public NhanVien(int id, String name, String birthday, String home, String level) {
         this.id = id;
@@ -15,6 +27,7 @@ public class NhanVien {
         this.level = level;
     }
     public NhanVien( String name, String birthday, String home, String level) {
+        this.id = sma ++; // vao ra file
         this.name = name;
         this.birthday = birthday;
         this.home = home;

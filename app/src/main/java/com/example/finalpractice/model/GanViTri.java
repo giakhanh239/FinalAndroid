@@ -3,12 +3,15 @@ package com.example.finalpractice.model;
 import java.io.Serializable;
 
 public class GanViTri implements Serializable {
+    private int id;
     private NhanVien nhanVien;
     private ViTri viTri;
-    private  String thoiDiemGan;
-    private  String describe;
+    private String thoiDiemGan;
+    private String describe;
+    private static int sma = 0;
 
     public GanViTri(NhanVien nhanVien, ViTri viTri, String thoiDiemGan, String describe) {
+        this.id = sma++;
         this.nhanVien = nhanVien;
         this.viTri = viTri;
         this.thoiDiemGan = thoiDiemGan;

@@ -38,8 +38,15 @@
             ></Button>
 
 
-    </LinearLayout>
 
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnGetNhanVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get"
+        ></Button>
     <ListView
         android:id="@+id/lvNhanVien"
         android:layout_width="wrap_content"

@@ -1,11 +1,15 @@
 package com.example.finalpractice.model;
 
-public class ViTri {
+import java.io.Serializable;
+
+public class ViTri implements Serializable {
     int id;
     private  String name;
     private  String describe;
+    private  static int sma = 0;
 
     public ViTri(String name, String describe) {
+        this.id = sma++; // vao ra file
         this.name = name;
         this.describe = describe;
     }
